@@ -8,7 +8,7 @@ require("dotenv").config();
 const app = express();
 
 app.use(express.static(path.join(__dirname))); // Static files should be served first
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 
 
@@ -17,9 +17,10 @@ app.use("/", myRoutes);
 
 const port = process.env.PORT;
 
-app.listen(port, async () => {
-  console.log(`server is running on http://localhost:${port}`);
-});
+// app.listen not required for vercel
+// app.listen(port, async () => {
+//   console.log(`server is running on http://localhost:${port}`);
+// });
 
 // Export the app for Vercel
 module.exports = app;
