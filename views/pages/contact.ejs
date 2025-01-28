@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html data-wf-domain="ostenwilde.webflow.io" data-wf-page="65f1de9909b532d9da65faef"
+    data-wf-site="654fa396610b458bf44c6f7e" lang="en">
+
+
+<head>
+    <title> ꝚAIHAN AꝚSH - Contact</title>
+    <%- include('../layouts/header.ejs') %>
+</head>
+
+
+
+<body>
+
+    <%- include('../layouts/preloader.ejs') %>
+
+
+	<%- include('../layouts/menu.ejs') %>
+
+	
+	<%- include('../layouts/navbar.ejs') %>
+
+    
+    <div style="opacity:0" class="page-wrapper">
+
+        <div class="section-contact">
+            <div class="contact-grid">
+                <div id="w-node-_7e789ba9-6323-999c-3085-00bf559ec14e-da65faef" class="contact-grid-left">
+                    
+                    <div>
+                        <div class="margin-bottom margin-small">
+                            <h1 data-w-id="84e6a5aa-9ac9-742f-5636-14f1823dc9ac"
+                                style="opacity:0;-webkit-transform:translate3d(-80px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-80px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-80px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-80px, 0px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)">
+                                Lets have a <span class="text-colour-orange">chat!</span></h1>
+                        </div>
+                        <div class="text-style-medium">Fill out the form below to get in touch and get a response in 24
+                            hours.</div>
+                    </div>
+
+                    <div class="div-block">
+                        <div><a href="https://www.linkedin.com/in/sajeer23/" target="_blank" class="hover-link w-inline-block">
+                                <div class="text-meta">LINKED IN</div>
+                                <div class="hover-link-line"></div>
+                            </a></div>
+                        <div><a href="https://www.instagram.com/barclays_sajeer_23/" target="_blank" class="hover-link w-inline-block">
+                                <div class="text-meta">INSTAGRAM</div>
+                                <div class="hover-link-line"></div>
+                            </a></div>
+                        <div><a href="https://www.facebook.com/sajee23" target="_blank" class="hover-link w-inline-block">
+                                <div class="text-meta">FACEBOOK</div>
+                                <div class="hover-link-line"></div>
+                            </a></div>
+                        <div><a href="https://wa.me/919633699766" target="_blank" class="hover-link w-inline-block">
+                                <div class="text-meta">WHATSAPP</div>
+                                <div class="hover-link-line"></div>
+                            </a></div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="form-block w-form">
+                            <form id="email-form" name="email-form" data-name="Email Form" method="" class="form" data-wf-page-id="65f1de9909b532d9da65faef" data-wf-element-id="7b08db1a-d5fb-8e11-a3ec-a3f10ada216c">
+                                <div class="form-wrapper">
+                                    <div class="field-wrapper left">
+                                        <label for="FirstName">First name</label>
+                                        <input class="text-field-form w-input" maxlength="256" name="Name" data-name="Name" placeholder="" type="text" id="FirstName" required="">
+                                    </div>
+                                    <div class="field-wrapper right">
+                                        <label for="LastName">Last name</label>
+                                        <input class="text-field-form w-input" maxlength="256" name="Name" data-name="Name" placeholder="" type="text" id="LastName" required="">
+                                    </div>
+                                </div>
+                                <div class="field-wrapper">
+                                    <label for="Email">Email</label>
+                                    <input class="text-field-form w-input" maxlength="256" name="Email" data-name="Email" placeholder="" type="email" id="Email" required="">
+                                </div>
+                                <div class="field-wrapper">
+                                    <label for="Phone">Phone</label>
+                                    <input class="text-field-form w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="" type="tel" id="Phone" required=""></div>
+                                <div class="field-wrapper">
+                                    <label for="Message">Message</label>
+                                    <textarea id="Message" name="Message" maxlength="5000" data-name="Message" placeholder="How can we help ?" required="" class="text-field-form big w-input"></textarea>
+                                </div>
+                                    <input type="submit" data-wait="Please wait..."
+                                    class="submit-button-contact w-button" value="SEND MESSAGE">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="w-node-_7e789ba9-6323-999c-3085-00bf559ec16b-da65faef" class="about-grid-right">
+                    <img src="/654fa396610b458bf44c6f7e/MyPhotos/profile pic swing.jpg"
+                        loading="lazy" sizes="(max-width: 991px) 100vw, 50vw"
+                        srcset="
+                        654fa396610b458bf44c6f7e/MyPhotos/profile pic swing.jpg 500w,
+                        654fa396610b458bf44c6f7e/MyPhotos/profile pic swing.jpg 800w, 
+                        654fa396610b458bf44c6f7e/MyPhotos/profile pic swing.jpg 867w"
+                        alt="" class="image-content height-100">
+                    <div class="image-noise"></div>
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <%- include('../layouts/footer.ejs') %>
+
+
+    </div>
+
+</body>
+
+
+
+<!-- SweetAlert2 Library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+$(document).ready(function () {
+    $('#email-form').on('submit', function (event) {
+        event.preventDefault();
+
+        const formData = {
+            firstName: $('#FirstName').val(),
+            lastName: $('#LastName').val(),
+            email: $('#Email').val(),
+            phone: $('#Phone').val(),
+            message: $('#Message').val(),
+        };
+
+        console.log('formData :', formData);
+        
+
+        // Send data via AJAX
+        $.ajax({
+            url: '/send-message',
+            method: 'POST',
+            data: JSON.stringify(formData),
+            contentType: 'application/json',
+            success: function (response) {
+                console.log('Response :', response);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: 'Your message has been successfully sent. We will get back to you soon.',
+                    showConfirmButton: false
+                });
+                // Optional: Clear the form after submission
+                $('#email-form')[0].reset();
+            },
+            error: function (xhr, status, error) {
+                console.error('xhr :', xhr);
+                console.error('status :', status);
+                console.error('Error :', error);
+                // Show SweetAlert error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong! Please try again later.',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+
+    });
+});
+
+</script>
+
+</html>

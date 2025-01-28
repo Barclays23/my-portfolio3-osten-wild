@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> You have a new message </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .main {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 4px solid #3b012e;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 5px 30px;
+            padding: 10px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+        }
+
+        .header {
+            background-color: #3b012e;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-top: -4px;
+        }
+
+        .header h2 {
+            margin: 0;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #9A0056;
+        }
+
+        .form-preview {
+            background-color: #f9e8e8;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .form-preview label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #11080d;
+        }
+
+        .form-preview .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .form-preview .row .column {
+            flex: 1;
+        }
+
+        .form-preview input,
+        .form-preview textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e31e004f;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-preview textarea {
+            height: 100px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <h2>${emailSubject}</h2>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <img src="https://glitzjewellery.com/cdn/shop/files/glitz_logo_black_320x.png?v=1665889126" alt="Glitz Jewellery Boutique">
+            </div>
+
+            <!-- Form preview section -->
+            <div class="form-preview">
+                <div class="row">
+                    <div class="column">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" value="${firstName}" disabled>
+                    </div>
+                    <div class="column">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" value="${lastName}" disabled>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="${email}" disabled>
+                    </div>
+                    <div class="column">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" value="${phone}" disabled>
+                    </div>
+                </div>
+
+                <label for="message">Message</label>
+                <textarea id="message" disabled>${message}</textarea>
+            </div>
+
+            <!-- Reply Buttons Section -->
+            <div class="reply-buttons">
+                <a href="mailto: ${email} ?subject=Re: ${emailSubject}&body=Hello ${firstName} ${lastName},%0D%0A%0D%0A" class="email-btn">
+                    <i class="fas fa-envelope"></i> Reply via Email
+                </a>
+                <a href="https://wa.me/${phone}?text=Hi ${firstName} ${lastName},%20I%20am%20replying%20to%20your%20message%20regarding%20${emailSubject}" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Reply via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>This email was sent from Glitz Jewellery Boutique. If you have any questions or concerns, please don't hesitate to contact us.</p>
+    </div>
+</body>
+
+</html>
